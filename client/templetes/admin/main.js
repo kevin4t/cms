@@ -10,7 +10,7 @@
                     sAlert.success("登陆成功",{effect:'jelly'});
                 } else {
                     console.log("ERROR: " + error.reason);
-                    alert("ERROR: " + error.reason);
+                    sAlert.error("ERROR: " + error.reason,{effect:'jelly'});
                 }
             });
         }
@@ -54,3 +54,17 @@
     });
 
 
+
+
+
+    Template.createAccountForm.events({
+        'submit #register-form' : function(e, t) {
+            var username = t.find('#account-username').value;
+            var password = t.find('#account-password').value;
+
+
+
+                Accounts.createUser({username: username, password : password});
+
+        }
+    });
