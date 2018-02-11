@@ -56,15 +56,3 @@
 
 
 
-
-    Template.createAccountForm.events({
-        'submit #register-form' : function(e, t) {
-            var username = t.find('#account-username').value;
-            var password = t.find('#account-password').value;
-
-
-
-                Accounts.createUser({username: username, password : password});
-
-        }
-    });
