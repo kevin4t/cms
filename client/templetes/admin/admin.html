@@ -1,0 +1,12 @@
+<template name="admin">
+
+
+    {{#if currentUser}}
+        {{> home}}
+    {{else}}
+        {{> login}}
+    {{/if}}
+
+
+
+</template>

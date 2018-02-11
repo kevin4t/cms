@@ -1,0 +1,16 @@
+<template name="postItem">
+
+        <div class="post">
+            <div class="post-content">
+                <h3>{{title}}</h3>
+            </div>
+            <div>
+            <p>发表时间： {{submitted}}{{#if currentUser}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}</p>
+            </div>
+            <hr>
+            <div>
+                <pre>{{content}}</pre>
+            </div>
+        </div>
+
+</template>

@@ -1,0 +1,24 @@
+<template name="header">
+    <script type="text/javascript">
+        $(function() {
+            $('nav#menu').mmenu();
+        });
+    </script>
+    <div id="page">
+        <div id="header">
+            <a href="#menu"></a>
+            Documentation
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="/">主页</a></li>
+                <li><a href="/admin">管理</a></li>
+    {{#if currentUser}}
+                <li><a href="/admin/write">写文章</a></li>
+    {{/if}}
+            </ul>
+        </nav>
+    </div>
+
+</template>
